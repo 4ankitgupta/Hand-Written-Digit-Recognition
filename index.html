@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digit Recognition Web App</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/b3aed9cb07.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+  </head>
+  <body onload="init()">
+    <!-- Welcome Section -->
+    <header class="welcome text-center">
+      <h1 class="display-4">Handwritten Digit Recognition</h1>
+      <p class="lead">Using Convolutional Neural Networks on MNIST Dataset</p>
+    </header>
+
+    <!-- Main Content -->
+    <section id="main-content" class="container text-center my-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <canvas
+            id="sketchpad"
+            class="sketchpad"
+            height="250"
+            width="250"
+          ></canvas>
+          <div class="mt-4">
+            <button type="button" class="btn btn-primary" id="predict_button">
+              Predict
+            </button>
+            <button type="button" class="btn btn-secondary" id="clear_button">
+              Clear
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-4 predicted-answer">
+          <h2>Prediction</h2>
+          <div id="result" class="result-display">-</div>
+          <p id="confidence" class="confidence">Confidence: -</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/main.js" charset="utf-8"></script>
+  </body>
+</html>

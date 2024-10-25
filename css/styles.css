@@ -1,0 +1,90 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  margin: 0;
+}
+
+h1,
+h2,
+p {
+  color: #ffffff;
+}
+
+/* Welcome Section */
+.welcome {
+  background: linear-gradient(135deg, #3a3a3a, #1e1e1e);
+  color: #ffffff;
+  padding: 2rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content */
+#main-content {
+  padding: 2rem;
+}
+
+.sketchpad {
+  border: 2px solid #616161;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.result-display {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ff4081;
+  margin-top: 1rem;
+}
+
+.confidence {
+  font-size: 1.2rem;
+  color: #8c8c8c;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #ff4081;
+  border: none;
+  font-weight: bold;
+  padding: 0.7rem 1.5rem;
+}
+
+.btn-primary:hover {
+  background-color: #ff79b0;
+}
+
+.btn-secondary {
+  background-color: #616161;
+  border: none;
+  font-weight: bold;
+  padding: 0.7rem 1.5rem;
+}
+
+.btn-secondary:hover {
+  background-color: #757575;
+}
+.row {
+  gap: 3rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  #main-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.predicted-answer {
+  text-align: center;
+}
