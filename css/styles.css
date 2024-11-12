@@ -11,10 +11,16 @@
   -moz-user-select: none;
   -ms-user-select: none;
 }
-
 #sketchpad {
-  user-select: auto; /* Allows interaction on canvas without affecting other elements */
-  touch-action: none; /* Prevents touch-based scrolling */
+  max-width: 100%;
+  touch-action: none; /* Prevents scrolling while drawing */
+}
+
+@media (max-width: 768px) {
+  .sketchpad {
+    width: 90%;
+    height: auto;
+  }
 }
 /* Fonts */
 body {
